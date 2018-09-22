@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+    document.addEventListener("DOMContentLoaded",function(){
+    // 淘宝响应式多写了下面这2句，修改viewport
+    let scale = 1 / window.devicePixelRatio;
+    document.querySelector('meta[name="viewport"]').setAttribute('content','initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no'); 
+    // 淘宝+网易响应式都需要的修改font-size
+    document.documentElement.style.fontSize = document.documentElement.clientWidth / 10 + 'px';
+    },false)
+</script>
+<body>
+    <div>
+        <div style="
+            background: pink;
+            height: 2rem;
+            width: 8rem;
+        ">600px</div>
+        <div style="
+            background: lightblue;
+            height: 2rem;
+            width: 8rem;
+        ">600px</div>
+    </div>
+</body>
+</html>
