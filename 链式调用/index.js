@@ -1,3 +1,6 @@
+function human(name){
+  return new Human(name)
+}
 function Human(name){
   this.name = name
   this.sayHello()
@@ -47,4 +50,4 @@ Human.prototype.rest = function(time){
   return this
 }
 
-new Human('Jack').eat().sleep(5).go().rest(10);
+human('Jack').eat().sleep(5).go().rest(10);
